@@ -1,0 +1,97 @@
+2024-11-19T21:44:22.500+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : Starting SimpleCrmApplication using Java 17.0.13 with PID 75220 (/Users/andrewto/Desktop/SCTP/simple-crm/target/classes started by andrewto in /Users/andrewto/Desktop/SCTP/simple-crm)
+2024-11-19T21:44:22.502+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-11-19T21:44:22.519+08:00  INFO 75220 --- [simple-crm] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-19T21:44:22.519+08:00  INFO 75220 --- [simple-crm] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-19T21:44:22.831+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-11-19T21:44:22.836+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-19T21:44:22.837+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-19T21:44:22.859+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-19T21:44:22.862+08:00  INFO 75220 --- [simple-crm] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 343 ms
+2024-11-19T21:44:22.990+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-19T21:44:23.005+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-11-19T21:44:23.010+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : Started SimpleCrmApplication in 0.651 seconds (process running for 0.786)
+2024-11-19T21:53:01.325+08:00  INFO 75220 --- [simple-crm] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-19T21:53:01.374+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : Starting SimpleCrmApplication using Java 17.0.13 with PID 75220 (/Users/andrewto/Desktop/SCTP/simple-crm/target/classes started by andrewto in /Users/andrewto/Desktop/SCTP/simple-crm)
+2024-11-19T21:53:01.374+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-11-19T21:53:01.442+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-11-19T21:53:01.442+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-19T21:53:01.443+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-19T21:53:01.445+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-19T21:53:01.446+08:00  INFO 75220 --- [simple-crm] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 71 ms
+2024-11-19T21:53:01.475+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-19T21:53:01.478+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-11-19T21:53:01.480+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : Started SimpleCrmApplication in 0.119 seconds (process running for 519.271)
+2024-11-19T21:53:01.481+08:00  INFO 75220 --- [simple-crm] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-19T21:53:18.004+08:00  INFO 75220 --- [simple-crm] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-19T21:53:18.045+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : Starting SimpleCrmApplication using Java 17.0.13 with PID 75220 (/Users/andrewto/Desktop/SCTP/simple-crm/target/classes started by andrewto in /Users/andrewto/Desktop/SCTP/simple-crm)
+2024-11-19T21:53:18.045+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-11-19T21:53:18.103+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-11-19T21:53:18.104+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-19T21:53:18.104+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-19T21:53:18.107+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-19T21:53:18.107+08:00  INFO 75220 --- [simple-crm] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 61 ms
+2024-11-19T21:53:18.130+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-19T21:53:18.133+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-11-19T21:53:18.135+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : Started SimpleCrmApplication in 0.099 seconds (process running for 535.927)
+2024-11-19T21:53:18.135+08:00  INFO 75220 --- [simple-crm] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-19T21:54:08.898+08:00  INFO 75220 --- [simple-crm] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-19T21:54:08.934+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : Starting SimpleCrmApplication using Java 17.0.13 with PID 75220 (/Users/andrewto/Desktop/SCTP/simple-crm/target/classes started by andrewto in /Users/andrewto/Desktop/SCTP/simple-crm)
+2024-11-19T21:54:08.935+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-11-19T21:54:08.983+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-19T21:54:08.984+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-19T21:54:08.984+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-19T21:54:08.987+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-19T21:54:08.987+08:00  INFO 75220 --- [simple-crm] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 52 ms
+2024-11-19T21:54:09.009+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-19T21:54:09.012+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-19T21:54:09.014+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : Started SimpleCrmApplication in 0.09 seconds (process running for 586.808)
+2024-11-19T21:54:09.015+08:00  INFO 75220 --- [simple-crm] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-19T21:55:27.040+08:00  INFO 75220 --- [simple-crm] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-11-19T21:55:27.074+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : Starting SimpleCrmApplication using Java 17.0.13 with PID 75220 (/Users/andrewto/Desktop/SCTP/simple-crm/target/classes started by andrewto in /Users/andrewto/Desktop/SCTP/simple-crm)
+2024-11-19T21:55:27.074+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-11-19T21:55:27.123+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-19T21:55:27.124+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-19T21:55:27.124+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-19T21:55:27.126+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-19T21:55:27.126+08:00  INFO 75220 --- [simple-crm] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 52 ms
+2024-11-19T21:55:27.146+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-19T21:55:27.149+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-19T21:55:27.152+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : Started SimpleCrmApplication in 0.086 seconds (process running for 664.947)
+2024-11-19T21:55:27.152+08:00  INFO 75220 --- [simple-crm] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-19T21:55:57.797+08:00  INFO 75220 --- [simple-crm] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-11-19T21:55:57.833+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : Starting SimpleCrmApplication using Java 17.0.13 with PID 75220 (/Users/andrewto/Desktop/SCTP/simple-crm/target/classes started by andrewto in /Users/andrewto/Desktop/SCTP/simple-crm)
+2024-11-19T21:55:57.833+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-11-19T21:55:57.885+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-19T21:55:57.886+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-19T21:55:57.886+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-19T21:55:57.889+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-19T21:55:57.889+08:00  INFO 75220 --- [simple-crm] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 55 ms
+2024-11-19T21:55:57.908+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-19T21:55:57.910+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-19T21:55:57.912+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : Started SimpleCrmApplication in 0.088 seconds (process running for 695.709)
+2024-11-19T21:55:57.913+08:00  INFO 75220 --- [simple-crm] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-19T21:56:02.353+08:00  INFO 75220 --- [simple-crm] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-19T21:56:02.389+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : Starting SimpleCrmApplication using Java 17.0.13 with PID 75220 (/Users/andrewto/Desktop/SCTP/simple-crm/target/classes started by andrewto in /Users/andrewto/Desktop/SCTP/simple-crm)
+2024-11-19T21:56:02.389+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-11-19T21:56:02.439+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-19T21:56:02.439+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-19T21:56:02.439+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-19T21:56:02.442+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-19T21:56:02.442+08:00  INFO 75220 --- [simple-crm] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 52 ms
+2024-11-19T21:56:02.461+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-19T21:56:02.463+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-19T21:56:02.466+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : Started SimpleCrmApplication in 0.086 seconds (process running for 700.262)
+2024-11-19T21:56:02.466+08:00  INFO 75220 --- [simple-crm] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-19T21:56:29.070+08:00  INFO 75220 --- [simple-crm] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2024-11-19T21:56:29.099+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : Starting SimpleCrmApplication using Java 17.0.13 with PID 75220 (/Users/andrewto/Desktop/SCTP/simple-crm/target/classes started by andrewto in /Users/andrewto/Desktop/SCTP/simple-crm)
+2024-11-19T21:56:29.099+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-11-19T21:56:29.148+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-19T21:56:29.148+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-19T21:56:29.149+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-19T21:56:29.151+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-19T21:56:29.151+08:00  INFO 75220 --- [simple-crm] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 51 ms
+2024-11-19T21:56:29.170+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-19T21:56:29.173+08:00  INFO 75220 --- [simple-crm] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-19T21:56:29.175+08:00  INFO 75220 --- [simple-crm] [restartedMain] s.e.ntu.simple_crm.SimpleCrmApplication  : Started SimpleCrmApplication in 0.084 seconds (process running for 726.972)
+2024-11-19T21:56:29.175+08:00  INFO 75220 --- [simple-crm] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2024-11-19T21:56:40.652+08:00  INFO 75220 --- [simple-crm] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
