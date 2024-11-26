@@ -44,7 +44,7 @@ public class ProductController {
     try {
       int index = getProductIndex(id);
       return new ResponseEntity<>(products.get(index), HttpStatus.OK);
-    } catch (CustomerNotFoundException e) {
+    } catch (ProductNotFoundException e) {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND); // 404
     }
   }
@@ -55,10 +55,13 @@ public class ProductController {
 
     try {
       int index = getProductIndex(id);
-      products.set(index, product);
-      Product updatedProduct = products.get(index);
-      return new ResponseEntity<>(updatedProduct, HttpStatus.OK);
-    } catch (CustomerNotFoundException e) {
+      Product updateProduct = products.get(index);
+      updateProduct.setName(product.getName());
+      updateProduct.setDescription(product.getDescription());
+      updateProduct.setPrice(product.getPrice());
+      products.set(index, updateProduct);
+      return new ResponseEntity<>(updateProduct, HttpStatus.OK);
+    } catch (ProductNotFoundException e) {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
   }
@@ -70,7 +73,7 @@ public class ProductController {
       int index = getProductIndex(id);
       products.remove(index);
       return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    } catch (CustomerNotFoundException e) {
+    } catch (ProductNotFoundException e) {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
   }
@@ -82,6 +85,6 @@ public class ProductController {
         return products.indexOf(product);
       }
     }
-    throw new CustomerNotFoundException(id);
+    throw new ProductNotFoundException(id);
   }
 }

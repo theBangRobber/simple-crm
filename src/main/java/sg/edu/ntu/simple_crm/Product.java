@@ -1,50 +1,18 @@
 package sg.edu.ntu.simple_crm;
 
 import java.util.UUID;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 public class Product {
-  private final String id;
+  private final String id = UUID.randomUUID().toString();
   private String name;
   private String description;
   private String price;
-
-  public Product() {
-    this.id = UUID.randomUUID().toString();
-  }
-
-  public Product(String name, String description, String price) {
-    this.id = UUID.randomUUID().toString();
-    this.name = name;
-    this.description = description;
-    this.price = price;
-  }
-
-  public String getId() {
-    return this.id;
-  }
-
-  public String getName() {
-    return this.name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public String getDescription() {
-    return this.description;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
-  public String getPrice() {
-    return this.price;
-  }
-
-  public void setPrice(String price) {
-    this.price = price;
-  }
-
 }
