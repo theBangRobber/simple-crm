@@ -21,6 +21,7 @@ public class Customer {
   // private final String id = UUID.randomUUID().toString();
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  // ⬆️ means the database will generate the ID with unique values
   @Column(name = "id")
   private Long id;
   @Column(name = "first_name")

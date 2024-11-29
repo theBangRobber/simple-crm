@@ -21,21 +21,25 @@ public class CustomerServiceImpl implements CustomerService {
     this.interactionRepository = interactionRepository;
   }
 
+  @Override
   public Customer createCustomer(Customer customer) {
     Customer newCustomer = customerRepository.save(customer);
     return newCustomer;
   }
 
+  @Override
   public Customer getCustomer(Long id) {
     Customer foundCustomer = customerRepository.findById(id).get();
     return foundCustomer;
   }
 
+  @Override
   public ArrayList<Customer> getAllCustomers() {
     List<Customer> allCustomers = customerRepository.findAll();
     return (ArrayList<Customer>) allCustomers;
   }
 
+  @Override
   public Customer updateCustomer(Long id, Customer customer) {
     // Retrieve the customer from db
     Customer customerToUpdate = customerRepository.findById(id).get();
@@ -50,6 +54,7 @@ public class CustomerServiceImpl implements CustomerService {
     return customerRepository.save(customerToUpdate);
   }
 
+  @Override
   public void deleteCustomer(Long id) {
     customerRepository.deleteById(id);
   }
