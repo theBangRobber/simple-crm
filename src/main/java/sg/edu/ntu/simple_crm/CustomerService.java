@@ -5,11 +5,13 @@ import java.util.ArrayList;
 public interface CustomerService {
   Customer createCustomer(Customer customer);
 
-  Customer getCustomer(String id);
+  Customer getCustomer(Long id);
 
   ArrayList<Customer> getAllCustomers();
 
-  Customer updateCustomer(String id, Customer customer);
+  Customer updateCustomer(Long id, Customer customer);
 
-  void deleteCustomer(String id);
+  void deleteCustomer(Long id);
+
+  Interaction addInteractionToCustomer(Long id, Interaction interaction);
 }

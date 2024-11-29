@@ -52,7 +52,7 @@ public class CustomerController {
   // Read - get one customer
   // localhost:8080/customers/35623130-bade-43d6-9bf4-6ea7189301fb
   @GetMapping("/{id}")
-  public ResponseEntity<Customer> getCustomer(@PathVariable String id) {
+  public ResponseEntity<Customer> getCustomer(@PathVariable Long id) {
     try {
       Customer foundCustomer = customerService.getCustomer(id);
       return new ResponseEntity<>(foundCustomer, HttpStatus.OK);
@@ -63,7 +63,7 @@ public class CustomerController {
 
   // Update
   @PutMapping("/{id}")
-  public ResponseEntity<Customer> updateCustomer(@PathVariable String id, @RequestBody Customer customer) {
+  public ResponseEntity<Customer> updateCustomer(@PathVariable Long id, @RequestBody Customer customer) {
     try {
       Customer updatedCustomer = customerService.updateCustomer(id, customer);
       return new ResponseEntity<>(updatedCustomer, HttpStatus.OK);
@@ -74,13 +74,21 @@ public class CustomerController {
 
   // Delete
   @DeleteMapping("/{id}")
-  public ResponseEntity<HttpStatus> deleteCustomer(@PathVariable String id) {
+  public ResponseEntity<HttpStatus> deleteCustomer(@PathVariable Long id) {
     try {
       customerService.deleteCustomer(id);
       return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     } catch (CustomerNotFoundException e) {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
+  }
+
+  // Nested route
+  @PostMapping("/{id}/interactions")
+  public ResponseEntity<Interaction> addInteractionToCustomer(@PathVariable Long id,
+      @RequestBody Interaction interaction) {
+    Interaction newInteraction = customerService.addInteractionToCustomer(id, interaction);
+    return new ResponseEntity<>(newInteraction, HttpStatus.CREATED);
   }
 
 }

@@ -12,10 +12,10 @@ import org.springframework.stereotype.Service;
 public class CustomerServiceWithLoggingImpl implements CustomerService {
 
   private final Logger logger = LoggerFactory.getLogger(CustomerServiceWithLoggingImpl.class);
-  private CustomerRepository customerRepository;
+  private OldCustomerRepository customerRepository;
 
   // Constructor Injection
-  public CustomerServiceWithLoggingImpl(CustomerRepository customerRepository) {
+  public CustomerServiceWithLoggingImpl(OldCustomerRepository customerRepository) {
     this.customerRepository = customerRepository;
   }
 
