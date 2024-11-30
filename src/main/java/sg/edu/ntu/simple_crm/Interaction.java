@@ -2,6 +2,9 @@ package sg.edu.ntu.simple_crm;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -34,8 +37,11 @@ public class Interaction {
   @Column(name = "interaction_date")
   private LocalDate interactionDate;
 
+  // This ignores the customer field
+  // @JsonBackReference
+  // This ignores the interaction field
+  @JsonIgnoreProperties("interactions")
   @ManyToOne(optional = false)
   @JoinColumn(name = "customer_id", referencedColumnName = "id")
   private Customer customer;
-
 }
