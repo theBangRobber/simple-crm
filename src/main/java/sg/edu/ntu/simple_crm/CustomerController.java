@@ -1,10 +1,12 @@
 package sg.edu.ntu.simple_crm;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,7 +14,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import jakarta.validation.Valid;
 
 /*
  * Controller (Req/Res) <-> Service (Business Logic) <-> Repository (CRUD datastore)
@@ -28,7 +33,7 @@ public class CustomerController {
 
   // Constructor Injection
   // @Autowired
-  // @Qualifier lets you specify the bean name for the injection
+  // @Qualifier lets you specifiy the bean name for the injection
   // public CustomerController(@Qualifier("customerServiceImpl") CustomerService
   // customerService) {
   public CustomerController(CustomerService customerService) {
@@ -37,7 +42,12 @@ public class CustomerController {
 
   // Create a customer
   @PostMapping("")
-  public ResponseEntity<Customer> createCustomer(@RequestBody Customer customer) {
+  public ResponseEntity<Customer> createCustomer(@Valid @RequestBody Customer customer) {
+
+    // if (bindingResult.hasErrors()) {
+    // System.out.println(bindingResult.getAllErrors());
+    // return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    // }
     Customer newCustomer = customerService.createCustomer(customer);
     return new ResponseEntity<>(newCustomer, HttpStatus.CREATED);
   }
@@ -53,34 +63,21 @@ public class CustomerController {
   // localhost:8080/customers/35623130-bade-43d6-9bf4-6ea7189301fb
   @GetMapping("/{id}")
   public ResponseEntity<Customer> getCustomer(@PathVariable Long id) {
-    try {
-      Customer foundCustomer = customerService.getCustomer(id);
-      return new ResponseEntity<>(foundCustomer, HttpStatus.OK);
-    } catch (CustomerNotFoundException e) {
-      return new ResponseEntity<>(HttpStatus.NOT_FOUND); // 404
-    }
+    return new ResponseEntity<>(customerService.getCustomer(id), HttpStatus.OK);
   }
 
   // Update
   @PutMapping("/{id}")
   public ResponseEntity<Customer> updateCustomer(@PathVariable Long id, @RequestBody Customer customer) {
-    try {
-      Customer updatedCustomer = customerService.updateCustomer(id, customer);
-      return new ResponseEntity<>(updatedCustomer, HttpStatus.OK);
-    } catch (CustomerNotFoundException e) {
-      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-    }
+    Customer updatedCustomer = customerService.updateCustomer(id, customer);
+    return new ResponseEntity<>(updatedCustomer, HttpStatus.OK);
   }
 
   // Delete
   @DeleteMapping("/{id}")
   public ResponseEntity<HttpStatus> deleteCustomer(@PathVariable Long id) {
-    try {
-      customerService.deleteCustomer(id);
-      return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    } catch (CustomerNotFoundException e) {
-      return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-    }
+    customerService.deleteCustomer(id);
+    return new ResponseEntity<>(HttpStatus.NO_CONTENT);
   }
 
   // Nested route
@@ -89,6 +86,20 @@ public class CustomerController {
       @RequestBody Interaction interaction) {
     Interaction newInteraction = customerService.addInteractionToCustomer(id, interaction);
     return new ResponseEntity<>(newInteraction, HttpStatus.CREATED);
+  }
+
+  // localhost:8080/customers/search?firstName=Stephen
+  @GetMapping("/search")
+  public ResponseEntity<List<Customer>> searchCustomers(@RequestParam String firstName) {
+    List<Customer> foundCustomers = customerService.getCustomersByFirstName(firstName);
+    return new ResponseEntity<>(foundCustomers, HttpStatus.OK);
+  }
+
+  // localhost:8080/customers/no-interactions
+  @GetMapping("/no-interactions")
+  public ResponseEntity<List<Customer>> getCustomersWithNoInteractions() {
+    List<Customer> customers = customerService.getCustomersWithNoInteraction();
+    return new ResponseEntity<>(customers, HttpStatus.OK);
   }
 
 }

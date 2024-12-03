@@ -1,6 +1,7 @@
 package sg.edu.ntu.simple_crm;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public interface CustomerService {
   Customer createCustomer(Customer customer);
@@ -14,4 +15,9 @@ public interface CustomerService {
   void deleteCustomer(Long id);
 
   Interaction addInteractionToCustomer(Long id, Interaction interaction);
+
+  List<Customer> getCustomersByFirstName(String firstName);
+
+  List<Customer> getCustomersWithNoInteraction();
+
 }

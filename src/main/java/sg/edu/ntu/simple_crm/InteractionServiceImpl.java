@@ -21,8 +21,9 @@ public class InteractionServiceImpl implements InteractionService {
 
   @Override
   public Interaction getInteraction(Long id) {
-    Interaction interaction = interactionRepository.findById(id).get();
-    return interaction;
+    // Interaction interaction = interactionRepository.findById(id).get();
+    // return interaction;
+    return interactionRepository.findById(id).orElseThrow(() -> new InteractionNotFoundException(id));
   }
 
   @Override
@@ -33,7 +34,9 @@ public class InteractionServiceImpl implements InteractionService {
 
   @Override
   public Interaction updateInteraction(Long id, Interaction interaction) {
-    Interaction interactionToUpdate = interactionRepository.findById(id).get();
+    // Interaction interactionToUpdate = interactionRepository.findById(id).get();
+    Interaction interactionToUpdate = interactionRepository.findById(id)
+        .orElseThrow(() -> new InteractionNotFoundException(id));
     interactionToUpdate.setRemarks(interaction.getRemarks());
     interactionToUpdate.setInteractionDate(interaction.getInteractionDate());
     return interactionRepository.save(interactionToUpdate);
