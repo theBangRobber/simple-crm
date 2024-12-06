@@ -1,0 +1,147 @@
+3.13
+
+Part 3: JPA Query Creation from Method Name
+
+What?
+provides a way to create custom queries using method names
+
+Why?
+Useful for custom queries that we can form just using method names
+
+How?
+1. Create a method in the repository interface CustomerRepository.java
+2. The method names
+[Operation]By[FieldName][Condition]
+i.e. `findByFirstNameAndLastName`, `findByFirstNameOrLastName`, `findByInteractionsIsEmpty`, etc.
+
+3. Add the method in the service layer CustomerServiceImpl.java
+4. Add the endpoint in the controller CustomerController.java - /customers/no-interactions
+
+
+Part 4: Optional and Exception Handling
+
+What?
+Optional is a container object - may or may not contain null value
+when we call findById, it returns Optional object
+
+Why?
+To avoid NullPointerException
+
+How?
+Use Optional in the service layer -> customerRepository.findById(id)
+
+Method 1: Use `Optional.isPresent()` and `Optional.get()`
+
+```java
+Optional<Customer> optionalCustomer = customerRepository.findById(id);
+
+if(optionalCustomer.isPresent()) {
+  Customer foundCustomer = optionalCustomer.get();
+  return foundCustomer;
+}
+
+throw new CustomerNotFoundException(id);
+```
+
+Method 2: Use `Optional.orElseThrow()`
+
+```java
+return customerRepository.findById(id).orElseThrow(() -> new CustomerNotFoundException(id));
+```
+
+
+Part 5: Global Exception Handler
+
+What?
+- Spring Boot provides a way to handle exceptions globally using `ControllerAdvice`
+
+Why?
+Handle exceptions in a centralized manner instead having try-catch blocks all over.
+
+How?
+1. Create a class GlobalExceptionHandler, annotate with @ControllerAdvice
+2. Add methods annotated with `@ExceptionHandler` to handle specific exceptions
+
+```java
+@ExceptionHandler(CustomerNotFoundException.class)
+public ResponseEntity<Object> handleCustomerNotFoundException(CustomerNotFoundException ex, WebRequest request) {
+  ErrorResponse errorResponse = new ErrorResponse(HttpStatus.NOT_FOUND, ex.getMessage());
+  return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
+}
+```
+
+3. Handle generic exceptions
+
+```java
+@ExceptionHandler(Exception.class)
+public ResponseEntity<Object> handleAllExceptions(Exception ex, WebRequest request) {
+  ErrorResponse errorResponse = new ErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage());
+  return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+}
+```
+
+
+Part 6: Validation
+
+What?
+Spring Boot supports validating payload request 
+
+Why?
+To validate the request
+
+How?
+1. Add validation annotations in the entity
+```java
+  @Column(name = "first_name")
+  @NotBlank(message = "First name is mandatory")
+  private String firstName;
+  @Column(name = "email")
+  @Email(message = "Email should be valid")
+```
+
+2. Using @Valid annotation in the controller method
+
+```java
+  @PostMapping("")
+  public ResponseEntity<Customer> createCustomer(@Valid @RequestBody Customer customer) {
+    return new ResponseEntity<>(customerService.createCustomer(customer), HttpStatus.CREATED);
+  }
+```
+
+3. Handle validation errors in global exception handler
+
+
+```java
+  @ExceptionHandler(MethodArgumentNotValidException.class)
+  public ResponseEntity<ErrorResponse> handleValidationExceptions(MethodArgumentNotValidException e) {
+    // Get a list of validation errors
+    List<ObjectError> validationErrors = e.getBindingResult().getAllErrors();
+    // Create a StringBuilder to store all messages
+    StringBuilder sb = new StringBuilder();
+    // Loop through all the errors and append the messages
+    for (ObjectError error : validationErrors) {
+      sb.append(error.getDefaultMessage() + ". ");
+    }
+    // Create an ErrorResponse object with the messages and the current time
+    ErrorResponse errorResponse = new ErrorResponse(sb.toString(), LocalDateTime.now());
+    // Return the error response with a 400 status code
+    return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
+  }
+```
+
+
+API Centric Application
+
+React (UI)   <--> Spring Boot API Server (Todos)
+
+Create Spring Boot project
+Add dependencies
+Define entities e.g. Todos
+Add Validation
+Set up JPA Repository
+Create Service layer
+Create Controller layer (/localhost:8080/todos)
+Set up exception Handling
+Setup up data properties -> application.properties
+Use Postman test your endpoints
+Build your React app to consume these APIs

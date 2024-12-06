@@ -1,8 +1,10 @@
-package sg.edu.ntu.simple_crm;
+package sg.edu.ntu.simple_crm.repository;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import sg.edu.ntu.simple_crm.entity.Customer;
 
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
 

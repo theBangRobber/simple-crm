@@ -1,13 +1,15 @@
-package sg.edu.ntu.simple_crm;
+package sg.edu.ntu.simple_crm.service;
 
-import java.util.ArrayList;
+import java.util.List;
+
+import sg.edu.ntu.simple_crm.entity.Interaction;
 
 public interface InteractionService {
   Interaction saveInteraction(Interaction interaction);
 
   Interaction getInteraction(Long id);
 
-  ArrayList<Interaction> getAllInteractions();
+  List<Interaction> getAllInteractions();
 
   Interaction updateInteraction(Long id, Interaction interaction);
 

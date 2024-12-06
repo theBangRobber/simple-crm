@@ -1,7 +1,7 @@
-package sg.edu.ntu.simple_crm;
+package sg.edu.ntu.simple_crm.exception;
 
 public class ProductNotFoundException extends RuntimeException {
-  ProductNotFoundException(String id) {
+  public ProductNotFoundException(String id) {
     super("Could not find product with id: " + id + ".");
   }
 }

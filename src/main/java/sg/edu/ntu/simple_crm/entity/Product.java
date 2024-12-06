@@ -1,4 +1,4 @@
-package sg.edu.ntu.simple_crm;
+package sg.edu.ntu.simple_crm.entity;
 
 import java.util.UUID;
 import lombok.AllArgsConstructor;

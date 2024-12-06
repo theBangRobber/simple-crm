@@ -1,6 +1,6 @@
-package sg.edu.ntu.simple_crm;
+package sg.edu.ntu.simple_crm.controller;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +13,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import jakarta.validation.Valid;
+import sg.edu.ntu.simple_crm.service.InteractionService;
+import sg.edu.ntu.simple_crm.entity.Interaction;
+
 @RestController
 @RequestMapping("/interactions")
 public class InteractionController {
@@ -23,7 +27,7 @@ public class InteractionController {
   }
 
   @PostMapping("")
-  public ResponseEntity<Interaction> saveInteraction(@RequestBody Interaction interaction) {
+  public ResponseEntity<Interaction> saveInteraction(@Valid @RequestBody Interaction interaction) {
     Interaction newInteraction = interactionService.saveInteraction(interaction);
     return new ResponseEntity<>(newInteraction, HttpStatus.CREATED);
   }
@@ -35,9 +39,8 @@ public class InteractionController {
   }
 
   @GetMapping("")
-  public ResponseEntity<ArrayList<Interaction>> getAllInteractions() {
-    ArrayList<Interaction> allInteractions = interactionService.getAllInteractions();
-    return new ResponseEntity<>(allInteractions, HttpStatus.OK);
+  public ResponseEntity<List<Interaction>> getAllInteractions() {
+    return new ResponseEntity<>(interactionService.getAllInteractions(), HttpStatus.OK);
   }
 
   @PutMapping("/{id}")

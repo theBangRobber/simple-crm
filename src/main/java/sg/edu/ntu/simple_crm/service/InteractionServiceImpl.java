@@ -1,8 +1,12 @@
-package sg.edu.ntu.simple_crm;
+package sg.edu.ntu.simple_crm.service;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
+
+import sg.edu.ntu.simple_crm.entity.Interaction;
+import sg.edu.ntu.simple_crm.exception.InteractionNotFoundException;
+import sg.edu.ntu.simple_crm.repository.InteractionRepository;
 
 @Service
 public class InteractionServiceImpl implements InteractionService {
@@ -21,20 +25,16 @@ public class InteractionServiceImpl implements InteractionService {
 
   @Override
   public Interaction getInteraction(Long id) {
-    // Interaction interaction = interactionRepository.findById(id).get();
-    // return interaction;
     return interactionRepository.findById(id).orElseThrow(() -> new InteractionNotFoundException(id));
   }
 
   @Override
-  public ArrayList<Interaction> getAllInteractions() {
-    ArrayList<Interaction> allInteractions = (ArrayList<Interaction>) interactionRepository.findAll();
-    return allInteractions;
+  public List<Interaction> getAllInteractions() {
+    return interactionRepository.findAll();
   }
 
   @Override
   public Interaction updateInteraction(Long id, Interaction interaction) {
-    // Interaction interactionToUpdate = interactionRepository.findById(id).get();
     Interaction interactionToUpdate = interactionRepository.findById(id)
         .orElseThrow(() -> new InteractionNotFoundException(id));
     interactionToUpdate.setRemarks(interaction.getRemarks());
