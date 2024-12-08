@@ -33,7 +33,7 @@ public class CustomerController {
 
   // Constructor Injection
   // @Autowired
-  // @Qualifier lets you specifiy the bean name for the injection
+  // @Qualifier lets you specify the bean name for the injection
   // public CustomerController(@Qualifier("customerServiceImpl") CustomerService
   // customerService) {
   public CustomerController(CustomerService customerService) {
